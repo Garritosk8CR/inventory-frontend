@@ -9,15 +9,18 @@ export const ProductsCreate = () => {
     return <Wrapper>
         <form className="mt-3">
             <div classname="form-floating pb-3">
-                <input type="text" name="name" className="form-control" placeholder="Product Name" />
+                <input type="text" name="name" className="form-control" placeholder="Product Name"
+                    onChange={(e) => setName(e.target.value)} />
                 <label for="name">Product Name</label>
             </div>
             <div classname="form-floating pb-3">
-                <input type="number" name="price" className="form-control" placeholder="Product Price" />
+                <input type="number" name="price" className="form-control" placeholder="Product Price" 
+                    onChange={(e) => setPrice(e.target.value)}/>
                 <label for="price">Product Price</label>
             </div>
             <div classname="form-floating pb-3">
-                <input type="text" name="quantity" className="form-control" placeholder="Product Quantity" />
+                <input type="text" name="quantity" className="form-control" placeholder="Product Quantity" 
+                    onChange={(e) => setQuantity(e.target.value)}/>
                 <label for="quantity">Product Quantity</label>
             </div>
 
