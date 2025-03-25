@@ -21,7 +21,7 @@ function App() {
                   <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
                       
-                      Dashboard
+                      Products
                     </a>
                   </li>
                 </ul>
@@ -29,28 +29,7 @@ function App() {
             </div>
           </div>
           <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="table-responsive small">
-              <table class="table table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1,001</td>
-                    <td>random</td>
-                    <td>data</td>
-                    <td>placeholder</td>
-                    <td>text</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            
           </main>
         </div>
       </div>
