@@ -1,5 +1,6 @@
 
 import {Wrapper} from './Wrapper.js';
+import { Link } from "react-router-dom";
 
 import React, {useState, useEffect} from'react';
 export const Products = () => {
@@ -15,6 +16,9 @@ export const Products = () => {
     }, []);
     return (
         <Wrapper>
+            <div className="pt-3 pb-2 mb-3 border-bottom">
+                <Link to={`/create`} className="btn btn-sm btn-outline-secondary">Add</Link>
+            </div>
             <div class="table-responsive small">
                 <table class="table table-striped table-sm">
                     <thead>
