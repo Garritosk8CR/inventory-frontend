@@ -1,6 +1,16 @@
 
 import {Wrapper} from './Wrapper.js';
 export const Products = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        // fetch products from API
+        (async () => {
+            const response = await fetch('http://localhost:8002/products');
+            const data = await response.json();
+            setProducts(data);
+        })()
+    }, []);
     return (
         <Wrapper>
             <div class="table-responsive small">
