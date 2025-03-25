@@ -14,6 +14,14 @@ export const Products = () => {
             setProducts(data);
         })()
     }, []);
+
+    const del = id => {
+        fetch(`http://localhost:8002/products/${id}`, {
+            method: 'DELETE'
+        }).then(() => {
+            setProducts(products.filter(product => product.id !== id));
+        })
+
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
@@ -38,7 +46,8 @@ export const Products = () => {
                                 <td>{product.price}</td>
                                 <td>{product.quantity}</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"
+                                        onClick={(e) => del(product.id)}>
                                         Delete
                                     </a>
                                 </td>
