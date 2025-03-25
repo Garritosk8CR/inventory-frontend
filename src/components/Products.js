@@ -18,13 +18,25 @@ export const Products = () => {
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Header</th>
-                            <th scope="col">Header</th>
-                            <th scope="col">Header</th>
-                            <th scope="col">Header</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {products.map((product, index) => (
+                            <tr key={product.id}>
+                                <td>{index + 1}</td>
+                                <td>{product.name}</td>
+                                <td>{product.price}</td>
+                                <td>{product.quantity}</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>))}
                         <tr>
                             <td>1,001</td>
                             <td>random</td>
