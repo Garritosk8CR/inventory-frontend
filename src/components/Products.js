@@ -1,5 +1,7 @@
 
 import {Wrapper} from './Wrapper.js';
+
+import React, {useState, useEffect} from'react';
 export const Products = () => {
     const [products, setProducts] = useState([]);
 
@@ -37,13 +39,6 @@ export const Products = () => {
                                     </a>
                                 </td>
                             </tr>))}
-                        <tr>
-                            <td>1,001</td>
-                            <td>random</td>
-                            <td>data</td>
-                            <td>placeholder</td>
-                            <td>text</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
