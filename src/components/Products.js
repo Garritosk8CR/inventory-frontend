@@ -33,7 +33,7 @@ export const Products = () => {
                     <tbody>
                         {products.map((product, index) => (
                             <tr key={product.id}>
-                                <td>{index + 1}</td>
+                                <td>{product.id}</td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
                                 <td>{product.quantity}</td>

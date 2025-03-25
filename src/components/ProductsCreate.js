@@ -1,10 +1,19 @@
 
 import {Wrapper} from './Wrapper.js';
 
+import React, {useState} from'react';
+
+
+import {useNavigate} from 'react-router-dom';
+
+
+
+
 export const ProductsCreate = () => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [quantity, setQuantity] = useState('');
+    const navigate = useNavigate(name, setName, setPrice, setQuantity);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +29,7 @@ export const ProductsCreate = () => {
             })
             }
         ).then(() => {
-            navigate('/products');
+            navigate(-1);
         })
     }
 
