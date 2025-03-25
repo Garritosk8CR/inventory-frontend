@@ -20,7 +20,8 @@ export const Products = () => {
             method: 'DELETE'
         }).then(() => {
             setProducts(products.filter(product => product.id !== id));
-        })
+        });
+    }
 
     return (
         <Wrapper>
